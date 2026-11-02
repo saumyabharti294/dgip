@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dgip-bg: #0a0a0f;
+  --dgip-surface: #12121a;
+  --dgip-border: #1e1e2e;
+  --dgip-accent: #6366f1;
+}
+
+body {
+  background: var(--dgip-bg);
+  color: #e2e8f0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dgip-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dgip-border);
+  border-radius: 3px;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes flow-line {
+  0% { stroke-dashoffset: 20; }
+  100% { stroke-dashoffset: 0; }
+}
+.animate-flow {
+  animation: flow-line 1s linear infinite;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in-up 0.3s ease-out forwards;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 4px rgba(99, 102, 241, 0.3); }
+  50% { box-shadow: 0 0 16px rgba(99, 102, 241, 0.6); }
+}
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@keyframes count-up {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.animate-count {
+  animation: count-up 0.4s ease-out forwards;
+}
